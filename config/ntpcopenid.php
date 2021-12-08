@@ -50,7 +50,7 @@ return [
     'redirectToUrls' => [
         'user_cancel' => '/login', // user 取消認證 時導向至哪裡
         'validate_fail' => '/login', // user 驗證未過 時導向至哪裡
-        'login_allow' => '/profile', // user 允許登入後 導向至哪裡
+        'login_allow' => '/auth/openid-login', // user 允許登入後 導向至哪裡
         'login_deny' => '/login', // user 被拒絕登入 時導向至哪裡
         'other' => '/login', // 其他狀況未經正常程序，如直接輸入網址瀏覽，導向至哪裡
     ],

@@ -1,5 +1,6 @@
 <?php
 
+    use App\Http\Controllers\AuthController;
     use App\Http\Controllers\OpenidController;
     use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,9 @@ Route::get('login', function(){
 NTPCOpenID::routes();
 
 // 假設設定之 login_allow 為 showdata
+Route::get('auth/openid-login', [AuthController::class, 'openidLogin']);
 Route::get('profile', [OpenidController::class, 'profile']);
+
+Route::get('auth/logout', [AuthController::class, 'logout']);
 
 
